@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 
 	fastptr = slowptr = list;
 
-	while (list && fastptr && slowptr)
+	while (list->next && fastptr && slowptr)
 	{
 		slowptr = slowptr->next;
 		fastptr = fastptr->next->next;
