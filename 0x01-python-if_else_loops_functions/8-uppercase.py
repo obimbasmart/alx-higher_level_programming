@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def uppercase(str):
-    '''function prints a string in uppercase followed
+    '''function write a string in uppercase followed
        by new line
 
        :@str: a single character string
