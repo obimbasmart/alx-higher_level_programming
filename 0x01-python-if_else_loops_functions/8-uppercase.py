@@ -14,4 +14,4 @@ def uppercase(str):
             char_num = ord(char)
 
         print("{:c}".format(char_num), end='')
-    print("")
+    print("{:s}".format(''))
