@@ -8,7 +8,7 @@ if __name__ == "__main__":
     arg_list = sys.argv
 
     if len(arg_list) != 4:
-        sys.stderr.write("Usage: {} <a> <operator> <b>\n".format(arg_list[0]))
+        print("Usage: {} <a> <operator> <b>".format(arg_list[0]))
         sys.exit(1)
 
     if arg_list[2] in operators:
@@ -19,6 +19,5 @@ if __name__ == "__main__":
         sys.exit(0)
 
     else:
-        sys.stderr.write("Unknown operator. "
-                         "Available operators: +, -, * and /\n")
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
