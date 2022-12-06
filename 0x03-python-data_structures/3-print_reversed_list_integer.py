@@ -7,7 +7,7 @@ def print_reversed_list_integer(my_list=[]):
        Return:
             :None
     '''
-    if my_list == None:
+    if my_list is None:
         return None
 
     for idx in range(-1, -1 * (len(my_list) + 1), -1):
