@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
+
 /**
  * is_palindrome - function that checks if a singlyLL is a palindrome
  * @head: pointer to first element of LL
@@ -9,7 +9,8 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *ptr, *middle_ptr;
-	int len, idx, idxx, n_len;
+	size_t len;
+	int idx, idxx, n_len;
 
 	if (!(*head) || !(*head)->next)
 		return (1);
