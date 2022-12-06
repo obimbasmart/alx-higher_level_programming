@@ -9,7 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *ptr, *middle_ptr;
-	size_t len, idx, idxx, n_len;
+	int len, idx, idxx, n_len;
 
 	if (!(*head) || !(*head)->next)
 		return (1);
