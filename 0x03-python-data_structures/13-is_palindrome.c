@@ -9,7 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *ptr, *middle_ptr;
-	size_t len, n_len;
+	size_t len;
 	int idx, idxx;
 
 	if (!(*head) || !(*head)->next)
@@ -17,15 +17,14 @@ int is_palindrome(listint_t **head)
 
 	middle_ptr = *head;
 	len = listint_len(*head);
-	n_len = (len / 2) + (len % 2);
-	idx = n_len;
+	idx = len / 2;
 
 	/* get the middle node */
 	while (idx--)
 		middle_ptr = middle_ptr->next;
 
 	ptr = middle_ptr;
-	idx = n_len;
+	idx = (len / 2) + (len % 2);
 
 	while (idx--)
 	{
