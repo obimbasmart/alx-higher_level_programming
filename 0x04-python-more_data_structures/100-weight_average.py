@@ -9,6 +9,9 @@ def weight_average(my_list=[]):
          Return:
              integer: weighted average
     '''
-    numerator = sum(list(map(lambda tup: tup[0] * tup[1], my_list)))
-    denominator = sum(list(map(lambda tup: tup[1], my_list)))
+    if not my_list:
+        return 0
+
+    return sum(list(map(lambda tup: tup[0] * tup[1], my_list))) / sum(
+           list(map(lambda tup: tup[1], my_list)))
     return numerator / denominator
