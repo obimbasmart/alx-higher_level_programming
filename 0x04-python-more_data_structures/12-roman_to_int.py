@@ -8,7 +8,7 @@ def roman_to_int(roman_string):
         Return:
             integer representation
     '''
-    if roman_string is None:
+    if roman_string is None or type(roman_string) != str:
         return 0
 
     int_sum = 0
