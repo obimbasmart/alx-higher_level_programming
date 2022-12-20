@@ -18,4 +18,8 @@
 4. A class Square that defines a square by: (based on `3-square.py`)
 	- Private instance attribute: size:
 		- property `def size(self):` to retrieve it
-		- property setter def size(self, value): to set it
+		- property setter `def size(self, value):` to set it
+
+5.  a class Square that defines a square by: (based on `4-square.py`)
+	- Public instance method: `def my_print(self):` that prints in stdout the square with the character #:
+		- if size is equal to 0, print an empty line
