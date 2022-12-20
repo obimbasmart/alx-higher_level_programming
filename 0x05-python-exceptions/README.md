@@ -11,3 +11,4 @@
 
 ## Advanced
 100. function that prints an integer with exception message
+101. function that executes a function safely.
