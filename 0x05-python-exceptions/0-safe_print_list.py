@@ -9,16 +9,12 @@ def safe_print_list(my_list=[], x=0):
         Return:
             the real number of elements printed
     '''
-    if my_list == False or x <= 0:
-        return None
-
     for idx in range(x):
         try:
             var = my_list[idx]
+            print(var, end='')
         except IndexError:
-            print('')
+            print()
             return idx
-        else:
-            print("{}".format(var), end='')
-    print('')
+    print()
     return (idx + 1)
