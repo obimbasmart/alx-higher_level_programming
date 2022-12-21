@@ -59,10 +59,10 @@ class Square:
             print()
 
         for i in range(self.__position[1]):
-            print()    # print y origin
+            print('')    # print y origin
 
         for idx in range(self.__size):
-            print('_' * self.__position[0], end='')    # print origin
+            print(' ' * self.__position[0], end='')    # print origin
 
             for idy in range(self.__size):
                 print("#", end='')
