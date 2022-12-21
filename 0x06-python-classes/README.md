@@ -52,4 +52,6 @@
 	- print the entire list in stdout
 	- one node number by line
 - Public instance method: `def sorted_insert(self, value):` that inserts a new Node into the correct sorted position in the list (increasing order)
-You are not allowed to import any module
+
+101. Write a class Square that defines a square by: (based on `6-square.py`)
+- Printing a Square instance should have the same behavior as my_print()
