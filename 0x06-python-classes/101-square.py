@@ -84,5 +84,6 @@ class Square:
         for idx in range(self.__size):
             _str += " " * self.__position[0]
             _str += "#" * self.__size
-            _str += "\n"
+            if self.__size - idx != 1:
+                _str += "\n"
         return _str
