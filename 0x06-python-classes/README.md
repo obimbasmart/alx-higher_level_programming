@@ -55,3 +55,6 @@
 
 101. Write a class Square that defines a square by: (based on `6-square.py`)
 - Printing a Square instance should have the same behavior as my_print()
+
+102. Write a class Square that defines a square by: (based on `4-square.py`)
+- Square instance can answer to comparators: `==`, `!=`, `>`, `>=`, `<` and `<=` based on the square area
