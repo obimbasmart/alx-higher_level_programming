@@ -96,6 +96,9 @@ class SinglyLinkedList:
 
     def __str__(self):
         """print the string representation of a Singly linked list"""
+        if not self.__head:    # empty list
+            return ''
+
         head = self.__head
         _list_str = ''
         while head.next_node:
