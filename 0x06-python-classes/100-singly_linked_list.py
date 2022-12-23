@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" A blueprint representatin of A Node and a SinglyLinked List
+""" A blueprint representation of A Node and a SinglyLinked List
 
 A Node constitutes of two members: data and next. data(int) holds the value
 of the Node, while next(Node) can be None or Node type
