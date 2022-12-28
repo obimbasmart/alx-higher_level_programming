@@ -1,6 +1,6 @@
 Text file for testing `add_integer` function
 
-using hte `add_integer` function
+using the `add_integer` function
 
 First import `0-add_integer` from  `add_integer.py` module
 
@@ -32,5 +32,6 @@ Use the function:
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
 
 
