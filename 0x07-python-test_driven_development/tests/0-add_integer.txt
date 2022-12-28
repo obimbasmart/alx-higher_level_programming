@@ -1,0 +1,36 @@
+Text file for testing `add_integer` function
+
+using hte `add_integer` function
+
+First import `0-add_integer` from  `add_integer.py` module
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Use the function:
+
+    >>> add_integer(5, 4)
+    9
+    >>> add_integer(2)
+    100
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+    >>> add_integer(-3, 4.7)
+    1
+    >>> add_integer(-4, -2)
+    -6
+    >>> add_integer(3, "home")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+    >>> add_integer("home", "pig")
+    Traceback (most recent call last):
+        ...c
+    TypeError: a must be an integer
+    >>> add_integer("home", 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+
