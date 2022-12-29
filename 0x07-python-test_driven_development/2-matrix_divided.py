@@ -32,29 +32,30 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix "
                         "(list of lists) of integers/floats")
-        return
+
     # check if matrix is a list of list
     for item in matrix:
         if not isinstance(item, list):
             raise TypeError("matrix must be a matrix"
                             " (list of lists) of integers/floats")
-            return
+
     # check if matrix is a list of list of integers or float
     for item in matrix:
         for num in item:
             if not isinstance(num, (int, float)):
                 raise TypeError("matrix must be a matrix "
                                 "(list of lists) of integers/floats")
-                return
+
     # Each row of the matrix must be of the same size
     size = len(matrix[0])
     for item in matrix:
         if len(item) != size:
             raise TypeError("Each row of the matrix must have the same size")
-            return
+
+    # check for division by 0
     if div == 0:
         raise TypeError("division by zero")
-        return
+
     new_matrix = []
     new_list = []
     for item in matrix:
