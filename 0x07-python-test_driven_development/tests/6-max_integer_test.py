@@ -19,4 +19,4 @@ class TestMaxInteger(unittest.TestCase):
     def test_exceptions(self):
         self.assertRaises(TypeError, max_integer(4))   # invalid arg
         self.assertRaises(TypeError, max_integer("list"))   # invalid arg
-        self.assertRaises(ValueError, max_integer([1, 4, 5, "six"]))
+        self.assertRaises(TypeError, max_integer([1, 4, 5, "six"]))
