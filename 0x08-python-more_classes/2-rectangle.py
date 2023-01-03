@@ -1,0 +1,62 @@
+#!/usr/bin/python3
+
+"""
+ a class Rectangle that defines a rectangle by: (based on 1-rectangle.py)
+"""
+
+
+class Rectangle:
+    """ a class rectangle that defines a rectangle object"""
+
+    def __init__(self, width=0, height=0):
+        """initialize object
+
+        Args:
+            width(int): the width of the rectangle
+        """
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        """getter"""
+        return self.__width
+
+    @width.setter
+    def width(self, width):
+        """setter"""
+        if not isinstance(width, int):  # must be an integer
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = width
+
+    @property
+    def height(self):
+        """getter"""
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        """setter"""
+        if not isinstance(height, int):  # must be an integer
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = height
+
+    def area(self):
+        """returns the area of a Rectangle
+            rea = length * width
+        """
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """returns the perimeter of a Rectangle
+           perimeter = 2 * (height + width)
+
+           if height or width is 0, perimeter = 0
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
