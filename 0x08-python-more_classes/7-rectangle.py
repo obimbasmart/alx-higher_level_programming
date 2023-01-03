@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
- a class Rectangle that defines a rectangle by: (based on 1-rectangle.py)
+ a class Rectangle that defines a rectangle by: (based on 6-rectangle.py)
 """
 
 
@@ -16,6 +16,7 @@ class Rectangle:
 
         Args:
             width(int): the width of the rectangle
+            height(int): height of rectangle
         """
         self.width = width
         self.height = height

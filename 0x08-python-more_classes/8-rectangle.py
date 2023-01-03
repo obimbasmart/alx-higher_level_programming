@@ -1,22 +1,31 @@
 #!/usr/bin/python3
 
 """
- a class Rectangle that defines a rectangle by: (based on 3-rectangle.py)
+ a class Rectangle that defines a rectangle by: (based on 7-rectangle.py)
 """
 
 
 class Rectangle:
     """ a class rectangle that defines a rectangle object"""
 
+    number_of_instances = 0
+    print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """initialize object
 
         Args:
             width(int): the width of the rectangle
-            height(int): height of rectangle
+            height(int): the height of the rectangle
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
+
+    def __del__(self):
+        """run when instance of class is dereference"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
@@ -71,10 +80,25 @@ class Rectangle:
         """informal string representation"""
         if self.__WH_is_zero() == 0:
             return ""
-        _str = (("#" * self.__width) + '\n') * self.__height
+        _str = ((str(self.print_symbol) * self.__width) + '\n') * self.__height
         _str = _str[:-1]
         return _str
 
     def __repr__(self):
         """formal string representation"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """return the biggest rectangle based on the area
+
+        if both have same area, return rect_1
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        return rect_1
