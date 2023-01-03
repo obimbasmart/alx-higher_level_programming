@@ -30,6 +30,12 @@
 - `repr()` should return a string representation of the rectangle to be 
 able to recreate a new instance by using `eval()`
 
-1. A class Rectangle that defines a rectangle by: (based on `4-rectangle.py`)
+5. A class Rectangle that defines a rectangle by: (based on `4-rectangle.py`)
 - Print the message `Bye rectangle...` (`...` being 3 dots not ellipsis) 
 when an instance of Rectangle is deleted
+
+6. A class Rectangle that defines a rectangle by: (based on `5-rectangle.py`)
+- Public class attribute `number_of_instances`:
+    - Initialized to 0 
+    - Incremented during each new instance instantiation 
+    - Decremented during each instance deletion
