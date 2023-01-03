@@ -21,3 +21,7 @@
 - Public instance method: def area(self): that returns the rectangle area
 - Public instance method: def perimeter(self): that returns the rectangle perimeter:
     - if width or height is equal to 0, perimeter is equal to 0
+
+3. A class Rectangle that defines a rectangle by: (based on `2-rectangle.py`)
+- `print()` and `str()` should print the rectangle with the character `#`: (see example below)
+- if width or height is equal to 0, return an empty string
