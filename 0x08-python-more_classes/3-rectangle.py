@@ -45,6 +45,11 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = height
 
+    def __WH_is_zero(self):
+        """returns True if either with or
+        height is zero, other False"""
+        return self.__height and self.__width
+
     def area(self):
         """returns the area of a Rectangle
             rea = length * width
@@ -57,12 +62,14 @@ class Rectangle:
 
            if height or width is 0, perimeter = 0
         """
-        if self.__width == 0 or self.__height == 0:
+        if not self.__WH_is_zero():
             return 0
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
         """informal string representation"""
+        if self.__WH_is_zero() == 0:
+            return ""
         _str = (("#" * self.__width) + '\n') * self.__height
         _str = _str[:-1]
         return _str
