@@ -14,3 +14,9 @@
 		>>> a = 89
 		>>> b = 89
       ```
+
+3. In the following code, do a and b point to the same object? Answer with `Yes` or `No`.
+	- ```
+		>>> a = 89
+		>>> b = a
+      ```
