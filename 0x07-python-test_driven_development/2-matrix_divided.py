@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """ This module contains a function that divides all elements of a matrix
 
  - Prototype: def matrix_divided(matrix, div):
