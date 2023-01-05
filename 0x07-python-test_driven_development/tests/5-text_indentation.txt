@@ -15,17 +15,22 @@ check for normal string without seperators:
 		>>> text_indentation(text)
 		Holberton School
 
+		>>> text = "Holberton.School"
+		>>> text_indentation(text)
+		Holberton
+		<BLANKLINE>
+		School
+
 check for string with ., ? and :
         >>> text = "Obimba Smart: went to ? . his brother bright"
         >>> text_indentation(text)
         Obimba Smart
         <BLANKLINE>
-        went to
+        went to 
         <BLANKLINE>
         <BLANKLINE>
         <BLANKLINE>
         his brother bright
-        <BLANKLINE>
 
 check for non string arg:
         >> text_indentation(32)
@@ -35,14 +40,8 @@ check for non string arg:
 
 check for empty string:
         >>> text_indentation("")
-        <BLANKLINE>
 
 check for arg without delimeters:
         >>> text_indentation("My name is obimba smart")
         My name is obimba smart
-
-
-
-
-
 

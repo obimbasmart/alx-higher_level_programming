@@ -27,12 +27,14 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    sep = ""
-    for delim in ".:?":
-        if delim in text:
-            sep = "\n"
-            break
+    is_new_line = 0
 
-    _str = text.replace('?', '.').replace('.', ':').split(':')
-
-    [print("{:s}{:s}".format(item.strip(), sep)) for item in _str]
+    for char in text:
+        if char in "?.:":
+            print("\n")
+            is_new_line = 1
+        else:
+            if char == ' ' and is_new_line:
+                continue
+            print(char, end="")
+            is_new_line = 0
