@@ -39,5 +39,7 @@ check when size is 1:
         >>> print_square(1)
         #
 
-
-
+check for missing one argument:
+		>>> print_square()
+		Traceback (most recent call last):
+		TypeError: print_square() missing 1 required positional argument: 'size'
