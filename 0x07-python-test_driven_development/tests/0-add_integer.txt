@@ -33,5 +33,9 @@ Use the function:
         ...
     TypeError: a must be an integer
 
-
+check for float overflow
+	>>> add_integer(float('inf'), 4)
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
 
