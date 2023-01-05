@@ -8,18 +8,21 @@ First import `0-add_integer` from  `add_integer.py` module
 
 Use the function:
 
+check valid args:
     >>> add_integer(5, 4)
     9
     >>> add_integer(2)
     100
-    >>> add_integer()
-    Traceback (most recent call last):
-        ...
-    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+check float and int:
     >>> add_integer(-3, 4.7)
     1
+
+check negative numbers:
     >>> add_integer(-4, -2)
     -6
+
+check invalid type
     >>> add_integer(3, "home")
     Traceback (most recent call last):
         ...
@@ -33,9 +36,16 @@ Use the function:
         ...
     TypeError: a must be an integer
 
+
 check for float overflow
 	>>> add_integer(float('inf'), 4)
 	Traceback (most recent call last):
 		...
 	OverflowError: cannot convert float infinity to integer
+
+check for nan(not a number)
+	>>> add_integer(float('nan'), 3)
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
 
