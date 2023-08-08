@@ -12,9 +12,7 @@
 3. <details><summary>Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.</summary>
     <ul>
         <li>You can find the source code [here](https://github.com/alx-tools/0x00.py/blob/master/3-print_number.py)</li>
-        <li>The output of the script should be:
-the number, followed by `Battery street`,
-followed by a new line</li>
+        <li>The output of the script should be: the number, followed by `Battery street` followed by a new line</li>
         <li>You are not allowed to cast the variable number into a string</li>
         <li>Your code must be 3 lines long</li>
         <li>You have to use f-strings</li>
@@ -23,9 +21,9 @@ followed by a new line</li>
 
 4. Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
     - You can find the source code [here](https://github.com/alx-tools/0x00.py/blob/master/4-print_float.py)
-5. Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
+5. Complete this source code in order to print 3 times a string stored in the variable `str`, followed by its first 9 characters.
 6. Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/5-print_string.py) in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
-7. Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/6-concat.py) to print Welcome to Holberton School!
+7. Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/6-concat.py) to print `Welcome to Holberton School!`
 8. Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/8-concat_edges.py) to print object-oriented programming with Python, followed by a new line.
 9. Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
     - Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)
