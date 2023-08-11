@@ -1,9 +1,5 @@
 # Python - if/else, loops, functions
 
-
-
-
-
 ## Mandatory tasks
 
 <details>
@@ -64,7 +60,7 @@
 </details>
 
 <details>
- <summary> <code>print_hexa.py</code> - Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)</summary>
+ <summary> <code>4-print_hexa.py</code> - Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)</summary>
  <ul>
   <li>You can only use one <code>print</code> function with string format</li>
   <li>You can only use one loop in your code</li>
@@ -73,7 +69,111 @@
  </ul>
 </details>
 
+<details>
+ <summary> <code>5-print_comb2.py</code> - Write a program that prints numbers from 0 to 99.</summary>
+ <ul>
+  <li>Numbers must be separated by <code>,,</code>, followed by a space</li>
+  <li>Numbers should be printed in ascending order, with two digits</li>
+  <li>The last number should be followed by a new line</li>
+  <li>You can only use no more than 2 <code>print</code> functions with string format</li>
+  <li>You can only use one loop in your code</li>
+  <li>You are not allowed to store numbers or strings in a variable</li>
+  <li>You are not allowed to import any module</li>
+ </ul>
+</details>
 
+<details>
+ <summary> <code>6-print_comb3</code> - Write a program that prints all possible different combinations of two digits.</summary>
+ <ul>
+  <li>Numbers must be separated by <code>,,</code>, followed by a space</li>
+  <li>The two digits must be different</li>
+  <li><code>01</code> and <code>10</code> are considered the same combination of the two digits <code>0</code> and <code>1</code></li>
+  <li>Print only the smallest combination of two digits</li>
+  <li>Numbers should be printed in ascending order, with two digits</li>
+  <li>The last number should be followed by a new line</li>
+  <li>You can only use no more than 3 <code>print</code> functions with string format</li>
+  <li>You can only use no more than 2 loops in your code</li>
+  <li>You are not allowed to store numbers or strings in a variable</li>
+  <li>You are not allowed to import any module</li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>7-is_lower.py</code> - Write a function that checks for lowercase character.</summary>
+ <ul>
+  <li>Prototype: <code>def islower(c):</code></li>
+  <li>Returns <code>True</code> if <code>c</code> is lowercase</li>
+  <li>Returns <code>False</code> otherwise</li>
+  <li>You are not allowed to import any module</li>
+  <li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li>
+  <li>Tips: <a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord"><code>ord()</code></a></li>
+  <li>You don’t need to understand <code>__import__</code></li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>8-uppercase.py</code> - Write a function that prints a string in uppercase followed by a new line.</summary>
+ <ul>
+  <li>Prototype: <code>def uppercase(str):</code></li>
+  <li>You can only use no more than 2 <code>print</code> functions with string format</li>
+  <li>You can only use one loop in your code</li>
+  <li>You are not allowed to import any module</li>
+  <li>You are not allowed to use <code>str.upper()</code> and <code>str.isupper()</code></li>
+  <li>Tips: <a href="https://docs.python.org/3.4/library/functions.html?highlight=ord#ord"><code>ord()</code></a></li>
+  <li>You don’t need to understand <code>__import__</code></li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>9-print_last_digit.py</code> - Write a function that prints the last digit of a number.</summary>
+ <ul>
+  <li>Prototype: <code>def print_last_digit(number):</code></li>
+  <li>Returns the value of the last digit</li>
+  <li>You are not allowed to import any module</li>
+  <li>You don’t need to understand <code>__import__</code></li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>10-add.py</code> - Write a function that adds two integers and returns the result.</summary>
+ <ul>
+  <li>Prototype: <code>def add(a, b):</code></li>
+  <li>Returns the value of <code>a + b</code></li>
+  <li>You are not allowed to import any module</li>
+  <li>You don’t need to understand <code>__import__</code></li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>11-pow.py</code> - Write a function that computes <code>a</code> to the power of <code>b</code> and return the value.</summary>
+ <ul>
+  <li>Prototype: <code>def pow(a, b):</code></li>
+  <li>Returns the value of <code>a ^ b</code></li>
+  <li>You are not allowed to import any module</li>
+  <li>You don’t need to understand <code>__import__</code></li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>12-fizzbuzz.py</code> - Write a function that prints the numbers from 1 to 100 separated by a space.</summary>
+ <ul>
+  <li>For multiples of three print <code>Fizz</code> instead of the number</li>
+  <li>For multiples of five print <code>Buzz</code></li>
+  <li>For numbers which are multiples of both three and five print <code>FizzBuzz</code></li>
+  <li>Prototype: <code>def fizzbuzz():</code></li>
+  <li>Each element should be followed by a space</li>
+  <li>You are not allowed to import any module</li>
+ </ul>
+ You don’t need to understand <code>__import__</code>
+</details>
+
+<details>
+ <summary> <code>13-insert_number.c</code> - Write a function in C that inserts a number into a sorted singly linked list.</summary>
+ <ul>
+  <li>Prototype: <code>listint_t *insert_node(listint_t **head, int number);</code></li>
+  <li>Return: the address of the new node, or <code>NULL</code> if it failed</li>
+ </ul>
+</details>
 
 
 ## Advanced tasks
