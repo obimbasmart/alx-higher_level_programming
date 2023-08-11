@@ -118,3 +118,41 @@
  </ul>
 </details>
 
+
+<details>
+ <summary> <code>10-divisible_by_2(my_list=[])</code> - Write a function that finds all multiples of 2 in a list.</summary>
+ <ul>
+  <li>Return a new list with True or False, depending on whether the integer at the same position in the original list is a multiple of 2</li>
+  <li>The new list should have the same size as the original list</li>
+  <li>You are not allowed to import any module</li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>11-delete_at(my_list=[], idx=0)</code> - Write a function that deletes the item at a specific position in a list.</summary>
+ <ul>
+  <li>If idx is negative or out of range, nothing changes (returns the same list)</li>
+  <li>You are not allowed to use pop()</li>
+  <li>You are not allowed to import any module</li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>12-switch.py</code> - Complete the source code to switch the value of a and b</summary>
+ <ul>
+  <li>You can find the source code <a href="https://github.com/alx-tools/0x03.py/blob/master/12-switch.py">here</a></li>
+  <li>Your code should be inserted where the comment is (line 4)</li>
+  <li>Your program should be exactly 5 lines long</li>
+ </ul>
+</details>
+
+<details>
+ <summary> <code>13-is_palindrome.c</code> - Write a function in C that checks if a singly linked list is a palindrome</summary>
+ <ul>
+  <li>Prototype: <code>int is_palindrome(listint_t **head);</code></li>
+  <li>Return: <code>0</code> if it is not a palindrome, <code>1</code> if it is a palindrome</li>
+  <li>An empty list is considered a palindrome</li>
+ </ul>
+</details>
+
+
