@@ -3,15 +3,15 @@
 
 /**
  * print_python_list_info - prints some basic info about Python lists
- * @py_obj: a python object of type PyObject, to be casted to PyListObject
+ * @p: a python object of type PyObject, to be casted to PyListObject
  *
  * Return: nothing
  */
-void print_python_list_info(PyObject *py_obj)
+void print_python_list_info(PyObject *p)
 {
 	int id;
 
-	PyListObject *list = (PyListObject *)py_obj;
+	PyListObject *list = (PyListObject *)p;
 
 	printf("[*] Size of the Python List = %ld\n", list->ob_base.ob_size);
 	printf("[*] Allocated = %ld\n", list->allocated);
