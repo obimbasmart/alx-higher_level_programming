@@ -1,5 +1,10 @@
 # Python - Data Structures: Lists, Tuples
 
+> #### 🥺 From Lists to Laughter to CPython: My Python Data Structure Tale
+> In this project, I embark on a whimsical journey through the enchanting realm of Python data structures! In this light-hearted yet informative project, join me as I unravel the mysteries of lists and tuples, two of Python's fundamental building blocks.
+>
+> I enjoyed the mandatory task, but the road took a bittersweet turn when I ventured into the advanced task. Ah, the advanced tasks—requiring the craft of a C function to be harmoniously called from Python. My once laughter-filled journey transformed into a sorrowful ballad as I grappled with the intricacies of `CPython`. Yet, even in my moments of contemplation, there was a silver lining — the **lessons learned and the growth achieved**.
+> 
 ## Mandatory tasks
 
 <details>
@@ -155,6 +160,7 @@
  </ul>
 </details>
 
+## Advanced
 <details>
  <summary> <code>100-print_python_list_info.c</code> - Create a C function that prints some basic info about Python lists.</summary>
  <ul>
@@ -162,7 +168,7 @@
   <li>Format: see example</li>
   <li>Python version: 3.4</li>
   <li>Your shared library will be compiled with this command line:</li>
-   <pre>gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c</pre>
+   <code>gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c</code>
   <li>OS: Ubuntu 14.04 LTS</li>
   <li>Start by reading:</li>
    <ul>
