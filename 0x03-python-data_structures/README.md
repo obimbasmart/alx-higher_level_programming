@@ -155,4 +155,22 @@
  </ul>
 </details>
 
+<details>
+ <summary> <code>100-print_python_list_info.c</code> - Create a C function that prints some basic info about Python lists.</summary>
+ <ul>
+  <li>Prototype: <code>void print_python_list_info(PyObject *p);</code></li>
+  <li>Format: see example</li>
+  <li>Python version: 3.4</li>
+  <li>Your shared library will be compiled with this command line:</li>
+   <pre>gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c</pre>
+  <li>OS: Ubuntu 14.04 LTS</li>
+  <li>Start by reading:</li>
+   <ul>
+    <li><a href="https://docs.python.org/3/c-api/list.html">listobject.h</a></li>
+    <li><a href="https://docs.python.org/3/c-api/structures.html">object.h</a></li>
+    <li><a href="https://docs.python.org/3/c-api/structures.html#common-object-structures">Common Object Structures</a></li>
+    <li><a href="https://docs.python.org/3/c-api/list.html">List Objects</a></li>
+   </ul>
+ </ul>
+</details>
 
