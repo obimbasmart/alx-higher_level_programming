@@ -9,7 +9,7 @@ def safe_print_list(my_list=[], x=0):
             number of elements printed
     '''
     if (my_list is None or not isinstance(x, int)
-            or x == 0):
+            or x == 0 or not isinstance(my_list, list)):
         return 0
 
     for idx in range(x):
