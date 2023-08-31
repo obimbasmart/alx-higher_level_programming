@@ -3,11 +3,19 @@
 void print_python_bytes(PyObject *p)
 {
 	size_t b_size, idx;
+	char *tp_name;
 
 	PyBytesObject *byte_obj = (PyBytesObject *)p;
 	b_size = byte_obj->ob_base.ob_size;
+	tp_name = (char *) byte_obj->ob_base.ob_base.ob_type->tp_name;
+
 
 	printf("[.] bytes object info\n");
+	if (strcmp("bytes", tp_name) != 0)
+	{
+		printf("  [ERROR] Invalid Bytes Object\n");
+		exit(1);
+	}
 	printf("  size: %lu\n", b_size);
 	printf("  trying string: %s\n", byte_obj->ob_sval);
 
