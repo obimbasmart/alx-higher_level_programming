@@ -1,0 +1,44 @@
+Write a function that prints a text with 2 new lines after each
+of these characters: ., ? and :
+
+- Prototype: def text_indentation(text):
+- text must be a string, otherwise raise a TypeError
+    exception with the message text must be a string
+- There should be no space at the beginning or at the end of each printed line
+- You are not allowed to import any module
+
+first import the function:
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+check for normal string without seperators:
+		>>> text = "Holberton School"
+		>>> text_indentation(text)
+		Holberton School
+		>>> text = ""
+		>>> text_indentation(text)
+
+check for string with ., ? and:
+        >>> text = "Obimba Smart: went to ? . his brother bright"
+        >>> text_indentation(text)
+        Obimba Smart
+        <BLANKLINE>
+        went to 
+        <BLANKLINE>
+        <BLANKLINE>
+        <BLANKLINE>
+        his brother bright
+
+check for non string arg:
+        >> text_indentation(32)
+        Traceback (most recent call last):
+            ...
+        TypeError: text must be a string
+
+check for empty string:
+        >>> text_indentation("")
+
+check for arg without delimeters:
+        >>> text_indentation("My name is obimba smart")
+        My name is obimba smart
+
+
