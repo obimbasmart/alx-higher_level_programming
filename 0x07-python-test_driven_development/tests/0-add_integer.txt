@@ -1,0 +1,60 @@
+============================================
+Text file for testing `add_integer` function
+============================================
+
+First import `0-add_integer` from  `add_integer.py` module
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+check valid args:
+    >>> add_integer(5, 4)
+    9
+    >>> add_integer(2)
+    100
+    >>> add_integer(3.4, 2)
+    5
+    >>> add_integer(8, 3.2)
+    11
+    >>> add_integer(5.5, 2.2)
+    7
+
+check negative args
+    >>> add_integer(-5, -4)
+    -9
+    >>> add_integer(-2)
+    96
+    >>> add_integer(-3.4, -2)
+    -5
+    >>> add_integer(-8, -3.2)
+    -11
+    >>> add_integer(-3.32, -4.443)
+    -7
+
+check invalid type
+    >>> add_integer(3, "home")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+    >>> add_integer("home", 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_integer("home", "pig")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+
+check for float overflow
+	>>> add_integer(float('inf'), 4)
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+check for nan(not a number)
+	>>> add_integer(float('nan'), 3)
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+
+
