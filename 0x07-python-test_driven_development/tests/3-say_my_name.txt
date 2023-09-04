@@ -1,0 +1,30 @@
+========================================================
+Test file for say_my_name function
+A function that prints My name is <first name> <last name>
+========================================================
+
+First, import the function:
+        >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check for valid arguments:
+        >>> say_my_name("Obimba", "Smart")
+        My name is Obimba Smart
+	>>> say_my_name("Obimba")
+	My name is Obimba
+	>>> say_my_name("")
+	>>> say_my_name("", "Smart");
+	My name is Smart
+
+Check when both args are not given:
+	>>> say_my_name("")
+
+Check for Invalid arguments:
+        >>> say_my_name(53, "smart")
+        Traceback (most recent call last):
+            ...
+        TypeError: first_name must be a string
+
+        >>> say_my_name("smart", [3, 4])
+        Traceback (most recent call last):
+            ...
+        TypeError: last_name must be a string
