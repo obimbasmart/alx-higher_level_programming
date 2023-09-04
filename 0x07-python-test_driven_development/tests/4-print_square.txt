@@ -1,0 +1,33 @@
+==================================
+Test file for function that prints a square using #
+==================================
+
+First, import the function:
+	>>> print_square = __import__("4-print_square").print_square
+
+Checks for valid integers greater than 0:
+    	>>> print_square(4)
+    	####
+    	####
+    	####
+    	####
+
+Check when size is less than 0:
+    	>>> print_square(-1)
+    	Traceback (most recent call last):
+		...
+    	ValueError: size must be >= 0
+
+Check when size is 0:
+	>>> print_square(0)
+
+check when size is 1:
+	>>> print_square(1)
+        #
+
+check when size is not an integer:
+    	>>> print_square("4")
+    	Traceback (most recent call last):
+	...
+    	TypeError: size must be an integer
+
