@@ -49,16 +49,25 @@ class Rectangle:
 
     def area(self):
         """returns the area of a Rectangle
-            area = length * width
         """
         return self.height * self.width
 
+    def __WH_is_zero(self):
+        """returns True if either with or
+            height is zero, other False"""
+        return self.height and self.width
+
     def perimeter(self):
         """returns the perimeter of a Rectangle
-           perimeter = 2 * (height + width)
-
-           if height or width is 0, perimeter = 0
         """
-        if self.width == 0 or self.height == 0:
+        if self.__WH_is_zero() == 0:
             return 0
         return 2 * (self.width + self.height)
+
+    def __str__(self):
+        """ returns informal string representation"""
+        if self.__WH_is_zero() == 0:
+            return ""
+        obj_str = (("#" * self.width) + '\n') * self.height
+        obj_str = obj_str[:-1]
+        return obj_str
