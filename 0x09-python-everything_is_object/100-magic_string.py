@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 my_list = [0]
 def magic_string():
     my_list[0] += 1
