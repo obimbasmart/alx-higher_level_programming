@@ -14,7 +14,7 @@ def say_my_name(first_name, last_name=""):
     Return:
         Nothing
     """
-    f_name_seperator = l_name_sep = " "
+    f_name_seperator = " "
 
     # check if arguments are valid types (string)
     if not isinstance(first_name, str):
@@ -28,8 +28,6 @@ def say_my_name(first_name, last_name=""):
 
     if first_name == "":
         f_name_seperator = ""
-    if last_name == "":
-        l_name_sep = ""
 
-    print("My name is{}{:s}{}{:s}".format(f_name_seperator,
-                                          first_name, l_name_sep, last_name))
+    print("My name is{}{:s} {:s}".format(f_name_seperator,
+                                         first_name, last_name))
