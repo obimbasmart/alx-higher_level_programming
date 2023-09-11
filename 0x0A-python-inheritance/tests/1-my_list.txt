@@ -1,0 +1,46 @@
+"""
+Test cases for class that inherits a list class
+"""
+
+First, import the function:
+    >>> module = __import__('1-my_list')
+
+Check for instantiation:
+    >>> my_list = module.MyList()
+
+Append elements to list:
+    >>> my_list.append(5)
+    >>> my_list.append(3)
+    >>> my_list.append(3)
+    >>> my_list.append(8)
+    >>> my_list.append(2)
+    >>> my_list.append(0)
+    >>> new_l = [5, 3, 3, 8, 2, 0]
+
+Regular check:
+    >>> my_list.print_sorted()
+    [0, 2, 3, 3, 5, 8]
+    >>> new_l == my_list
+    True
+
+Check for empty list
+    >>> empty_list = module.MyList()
+    >>> empty_list.print_sorted()
+    []
+
+check for print:
+    >>> print(empty_list)
+    []
+
+check print_sorted returns new list:
+    >>> new_list = my_list.print_sorted()
+    [0, 2, 3, 3, 5, 8]
+    >>> new_list == my_list
+    False
+
+check sorting with negative numbers:
+    >>> my_list.append(-3)
+    >>> my_list.append(-9)
+    >>> my_list.print_sorted()
+    [-9, -3, 0, 2, 3, 3, 5, 8]
+
