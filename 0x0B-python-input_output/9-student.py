@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-""" a class Student that defines a student based on name,
-age"""
+"""
+a class Student that defines a student based on name, age
+"""
 
 
 class Student:
@@ -19,4 +20,4 @@ class Student:
 
     def to_json(self):
         """retrieves a dictionary representation of a Student"""
-        return self.__dict__t a
+        return self.__dict__
