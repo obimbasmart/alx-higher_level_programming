@@ -34,6 +34,24 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __update(self, id=None, size=None, x=None, y=None):
+        """update instance attribute"""
+        if id is not None:
+            self.id = id
+        if size is not None:
+            self.size = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """update instance attribute"""
+        if len(args):
+            self.__update(*args)
+        else:
+            self.__update(**kwargs)
+
     def __str__(self):
         """return string representation of Rectangle instance"""
         return "[{}] ({}) {}/{} - {}".format(
