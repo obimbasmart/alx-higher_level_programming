@@ -123,3 +123,10 @@ class Rectangle(Base):
             self.__update(*args)
         else:
             self.__update(**kwargs)
+
+    def to_dictionary(self):
+        """ returns the dictionary representation of a Rectangle"""
+        class_name = self.__class__.__name__
+        attr_names = [name[len(class_name) + 3:] if class_name in name
+                      else name for name in self.__dict__.keys()]
+        return {key: self.__getattribute__(key) for key in attr_names}
