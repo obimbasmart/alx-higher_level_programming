@@ -103,3 +103,23 @@ class Rectangle(Base):
             self.x, self.y,
             self.width, self.height
         )
+
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        """update instance attribute"""
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """update instance attribute"""
+        if len(args):
+            self.__update(*args)
+        else:
+            self.__update(**kwargs)
