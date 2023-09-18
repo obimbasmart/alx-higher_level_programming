@@ -59,3 +59,8 @@ class Square(Rectangle):
             self.x, self.y,
             self.width
         )
+
+    def to_dictionary(self):
+        """dictionary representation of Square"""
+        attr_names = ["id", "size", "x", "y"]
+        return {key: self.__getattribute__(key) for key in attr_names}
