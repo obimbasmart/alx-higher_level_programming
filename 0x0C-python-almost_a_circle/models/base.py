@@ -3,6 +3,8 @@
 """This module contains the base class of all class
 in this project"""
 
+import json
+
 
 class Base:
     """base class of all Geometric Shapes"""
