@@ -44,3 +44,17 @@ class Base:
             json_object = cls.to_json_string([obj.to_dictionary()
                                               for obj in list_objs])
             file.write(json_object)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string"""
+        if json_string is None:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        new_instance = cls(1, 1)
+        new_instance.update(**dictionary)
+        return new_instance
