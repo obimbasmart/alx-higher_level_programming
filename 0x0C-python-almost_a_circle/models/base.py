@@ -5,6 +5,7 @@ in this project"""
 
 import json
 import os
+import csv
 
 
 class Base:
@@ -68,9 +69,39 @@ class Base:
     def load_from_file(cls):
         """returns a list of instances"""
         file_name = cls.__name__ + '.json'
-        # check if file exists
         if not os.path.exists(file_name):
             return []
         with open(file_name, 'r', encoding='utf-8') as file:
             return [cls.create(**obj)
                     for obj in cls.from_json_string(file.read())]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """convert list of objects into csv format"""
+        object_dicts = [obj.to_dictionary() for obj in list_objs]
+        header = object_dicts[0].keys()
+        with open(cls.__name__ + '.csv', 'w', encoding='utf-8') as file:
+            writer = csv.DictWriter(file, fieldnames=header)
+            writer.writeheader()
+            writer.writerows(object_dicts)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """convert csv file into list of class instance"""
+        file_name = cls.__name__ + '.csv'
+        if not os.path.exists(file_name):
+            return []
+
+        list_instance = []
+        with open(file_name, 'r', encoding='utf-8') as file:
+            keys = Base.__to_list(file.readline())  # get the keys
+            for line in file:
+                values = [int(val) for val in Base.__to_list(line)]
+                obj_dict = dict(zip(keys, values))  # convert to dictionary
+                list_instance.append(cls.create(**obj_dict))
+        return list_instance
+
+    @staticmethod
+    def __to_list(string):
+        """convert a csv string into a list of strings"""
+        return [value.strip() for value in string.split(',')]
