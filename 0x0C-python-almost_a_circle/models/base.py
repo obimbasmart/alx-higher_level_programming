@@ -6,6 +6,7 @@ in this project"""
 import json
 import os
 import csv
+import turtle
 
 
 class Base:
@@ -105,3 +106,33 @@ class Base:
     def __to_list(string):
         """convert a csv string into a list of strings"""
         return [value.strip() for value in string.split(',')]
+
+    def draw(list_rectangles, list_squares):
+        """draw a shape (child instance of Base) e.g Rectangle, Square"""
+        my_turtle = turtle.Turtle()
+        turtle.bgcolor("black")
+        my_turtle.pencolor("white")
+        my_turtle.speed(1)
+        my_turtle.pensize(3)
+        width = -100
+
+        for shape in list_rectangles + list_squares:
+            Base.drawshape(my_turtle, shape, width)
+            width = shape.width
+
+        my_turtle.getscreen()._root.mainloop()  # <-- run the Tkinter main loop
+
+    @staticmethod
+    def drawshape(screen, shape, prev_width):
+        screen.penup()
+        screen.setx(prev_width + shape.width)
+        screen.sety(prev_width * 2)
+        screen.pendown()
+        # screen.goto(shape.x, shape.y)
+        screen.left(90)
+        for i in range(4):
+            if i % 2 == 0:
+                screen.forward(shape.height)
+            else:
+                screen.forward(shape.width)
+            screen.left(90)
