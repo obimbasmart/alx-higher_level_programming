@@ -4,6 +4,7 @@
 in this project"""
 
 import json
+import os
 
 
 class Base:
@@ -62,3 +63,14 @@ class Base:
         new_instance = cls(1, x_origin_or_height)
         new_instance.update(**dictionary)
         return new_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        file_name = cls.__name__ + '.json'
+        # check if file exists
+        if not os.path.exists(file_name):
+            return []
+        with open(file_name, 'r', encoding='utf-8') as file:
+            return [cls.create(**obj)
+                    for obj in cls.from_json_string(file.read())]
