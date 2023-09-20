@@ -1,78 +1,80 @@
-#!/usr/bin/pythoon3
-
-""" Module contains unit test for a Rectangle Object"""
+#!/usr/bin/python3
 
 
 import unittest
 from models.rectangle import Rectangle
 
 
+def setUpModule():
+    global r1, r2
+    r1 = Rectangle(10, 4)
+    r2 = Rectangle(5, 2, id=99)
+
+
 class TestRectangle(unittest.TestCase):
 
     def setUp(self):
-        self.r1 = Rectangle(1, 2)
-        self.r2 = Rectangle(10, 20, 3, 3, 100)
-
-    def tearDown(self):
-        del self.r1
-        del self.r2
+        r1.width = 10
+        r1.height = 4
+        r1.x = 0
+        r1.y = 0
 
     def test_id(self):
-        self.assertEqual(self.r1.id, 4)
-        self.assertEqual(self.r2.id, 100)
+        self.assertEqual(r1.id, 4)
+        self.assertEqual(r2.id, 99)
 
     def test_width(self):
-        self.assertEqual(self.r1.width, 1)
-        self.assertEqual(self.r2.width, 10)
+        self.assertEqual(r1.width, 10)
+        self.assertEqual(r2.width, 5)
 
-        self.r1.width = 3
-        self.r2.width = 5
+        r1.width = 3
+        r2.width = 5
 
-        self.assertEqual(self.r1.width, 3)
-        self.assertEqual(self.r2.width, 5)
+        self.assertEqual(r1.width, 3)
+        self.assertEqual(r2.width, 5)
 
         with self.assertRaises(ValueError):
-            self.r1.width = -1
+            r1.width = -1
             Rectangle(-22, 100)
             Rectangle(0, 42)
 
         with self.assertRaises(TypeError):
-            self.r1.width = "4"
+            r1.width = "4"
             Rectangle("3", 2)
 
     def test_height(self):
-        self.assertEqual(self.r1.height, 2)
-        self.assertEqual(self.r2.height, 20)
+        self.assertEqual(r1.height, 4)
+        self.assertEqual(r2.height, 2)
 
-        self.r1.height = 3
-        self.r2.height = 5
+        r1.height = 3
+        r2.height = 5
 
-        self.assertEqual(self.r1.height, 3)
-        self.assertEqual(self.r2.height, 5)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r2.height, 5)
 
         with self.assertRaises(ValueError):
-            self.r1.height = -1
+            r1.height = -1
             Rectangle(8, -3)
             Rectangle(2, "3")
 
         with self.assertRaises(TypeError):
-            self.r1.width = "4"
+            r1.width = "4"
             Rectangle("3", 2)
 
     def test_x_orgin(self):
-        self.assertEqual(self.r1.x, 0)
-        self.assertEqual(self.r2.x, 3)
+        self.assertEqual(r1.x, 0)
+        self.assertEqual(r2.x, 0)
 
-        self.r1.x = 4
-        self.r2.x = 8
+        r1.x = 4
+        r2.x = 8
 
-        self.assertEqual(self.r1.x, 4)
-        self.assertEqual(self.r2.x, 8)
+        self.assertEqual(r1.x, 4)
+        self.assertEqual(r2.x, 8)
 
         with self.assertRaises(ValueError):
-            self.r1.x = -1
+            r1.x = -1
             Rectangle(4, 2, -2)
 
         with self.assertRaises(TypeError):
-            self.r1.x = "4"
+            r1.x = "4"
             Rectangle(4, 2, -7)
