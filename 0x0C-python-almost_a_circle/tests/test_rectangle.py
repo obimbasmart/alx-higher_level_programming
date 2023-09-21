@@ -111,3 +111,15 @@ class TestRectangle(unittest.TestCase):
         self.assert_stdout(Rectangle(3, 3, y=2), "\n\n###\n###\n###\n")
         self.assert_stdout(Rectangle(3, 3, x=2), "  ###\n  ###\n  ###\n")
         self.assert_stdout(Rectangle(3, 3, 2, 2), "\n\n  ###\n  ###\n  ###\n")
+
+    def test_str(self):
+        self.assertEqual(str(r1), '[Rectangle] (6) 0/0 - 10/2')
+        self.assertEqual(str(Rectangle(5, 3, id=44)),
+                         '[Rectangle] (44) 0/0 - 5/3')
+
+    def test_update(self):
+        fake_rect = Rectangle(1, 2)
+        attrs = {"width": 7, "height": 8, "x": 0, "y": 4, "id": 9}
+        fake_rect.update(**attrs)
+        self.assertEqual(fake_rect.to_dictionary(), {
+                         'width': 7, 'height': 8, 'x': 0, 'y': 4, 'id': 9})
