@@ -3,19 +3,21 @@
 
 import unittest
 from models.rectangle import Rectangle
+import io
+import unittest.mock
 
 
 def setUpModule():
     global r1, r2
-    r1 = Rectangle(10, 4)
-    r2 = Rectangle(5, 2, id=99)
+    r1 = Rectangle(10, 2)
+    r2 = Rectangle(5, 3, id=99)
 
 
 class TestRectangle(unittest.TestCase):
 
     def setUp(self):
         r1.width = 10
-        r1.height = 4
+        r1.height = 2
         r1.x = 0
         r1.y = 0
 
@@ -59,8 +61,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle("3", 2)
 
     def test_height(self):
-        self.assertEqual(r1.height, 4)
-        self.assertEqual(r2.height, 2)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r2.height, 3)
 
         r1.height = 3
         r2.height = 5
@@ -94,3 +96,18 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1.x = "4"
             Rectangle(4, 2, -7)
+
+    def test_area(self):
+        self.assertEqual(r1.area(), 20)
+        self.assertEqual(r2.area(), 15)
+
+    @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
+    def assert_stdout(self, r1, expected_output, mock_stdout):
+        r1.display()
+        self.assertEqual(mock_stdout.getvalue(), expected_output)
+
+    def test_display(self):
+        self.assert_stdout(r1, '##########\n##########\n')
+        self.assert_stdout(Rectangle(3, 3, y=2), "\n\n###\n###\n###\n")
+        self.assert_stdout(Rectangle(3, 3, x=2), "  ###\n  ###\n  ###\n")
+        self.assert_stdout(Rectangle(3, 3, 2, 2), "\n\n  ###\n  ###\n  ###\n")
