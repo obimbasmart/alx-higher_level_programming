@@ -23,6 +23,22 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.id, 6)
         self.assertEqual(r2.id, 99)
 
+    def test_type_validation(self):
+        with self.assertRaises(TypeError):
+            Rectangle("3", 1, 4, 9, 44)
+            Rectangle(5, "4", 5, 5, 37)
+            Rectangle(5, 4, "5", 5, 38)
+            Rectangle(5, 4, 5, "5", 39)
+
+    def test_value_validation(self):
+        with self.assertRaises(ValueError):
+            Rectangle(0, 1, 4, 9, 44)
+            Rectangle(-4, 3, 4, 9, 44)
+            Rectangle(2, 0, 4, 9, 44)
+            Rectangle(6, -1, 4, 9, 44)
+            Rectangle(5, 4, -3, 5, 37)
+            Rectangle(5, 4, 5, -5, 38)
+
     def test_width(self):
         self.assertEqual(r1.width, 10)
         self.assertEqual(r2.width, 5)
