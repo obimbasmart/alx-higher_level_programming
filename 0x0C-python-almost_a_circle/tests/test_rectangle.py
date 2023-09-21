@@ -20,7 +20,7 @@ class TestRectangle(unittest.TestCase):
         r1.y = 0
 
     def test_id(self):
-        self.assertEqual(r1.id, 4)
+        self.assertEqual(r1.id, 6)
         self.assertEqual(r2.id, 99)
 
     def test_width(self):

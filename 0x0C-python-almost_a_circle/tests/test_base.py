@@ -45,3 +45,20 @@ class TestBase(unittest.TestCase):
         self.assertEqual(
             Base.to_json_string([obj.to_dictionary() for obj in list_square]),
             '[{"id": 101, "size": 10, "x": 0, "y": 0}, {"id": 102, "size": 5, "x": 0, "y": 0}]')
+
+    def test_from_json_string(self):
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(
+            Base.from_json_string('[{"width": 10, "height": 4, "x": 0, "y": 0, "id": 3}]'), [{"width": 10, "height": 4, "x": 0, "y": 0, "id": 3}],)
+        self.assertEqual(
+            Base.from_json_string('[{"id": 101, "size": 10, "x": 0, "y": 0}, {"id": 102, "size": 5, "x": 0, "y": 0}]'), [{"id": 101, "size": 10, "x": 0, "y": 0}, {"id": 102, "size": 5, "x": 0, "y": 0}])
+
+    def test_create(self):
+        obj_dict_rect = r1.to_dictionary()
+        obj_dict_sqr = s1.to_dictionary()
+        new_r1 = Rectangle.create(**obj_dict_rect)
+        new_s1 = Square.create(**obj_dict_sqr)
+        self.assertEqual(new_r1.to_dictionary(), r1.to_dictionary())
+        self.assertEqual(new_s1.to_dictionary(), s1.to_dictionary())
+        self.assertEqual(new_r1 == r1, False)
+        self.assertEqual(new_s1 == s1, False)
