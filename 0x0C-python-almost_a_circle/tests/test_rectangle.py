@@ -27,6 +27,10 @@ class TestRectangle(unittest.TestCase):
 
     def test_type_validation(self):
         with self.assertRaises(TypeError):
+            Rectangle("6", 3)
+            Rectangle(5, "3")
+            Rectangle(4, 5, "2")
+            Rectangle(1, 3, 4, "4")
             Rectangle("3", 1, 4, 9, 44)
             Rectangle(5, "4", 5, 5, 37)
             Rectangle(5, 4, "5", 5, 38)
@@ -34,6 +38,10 @@ class TestRectangle(unittest.TestCase):
 
     def test_value_validation(self):
         with self.assertRaises(ValueError):
+            Rectangle(-3, 7)
+            Rectangle(0, 5)
+            Rectangle(5, -7)
+            Rectangle(3, 0)
             Rectangle(0, 1, 4, 9, 44)
             Rectangle(-4, 3, 4, 9, 44)
             Rectangle(2, 0, 4, 9, 44)
