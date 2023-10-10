@@ -27,7 +27,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_type_validation(self):
         with self.assertRaises(TypeError):
-            Rectangle("6", 3)
+            Rectangle("1", 2)
             Rectangle(5, "3")
             Rectangle(4, 5, "2")
             Rectangle(1, 3, 4, "4")
