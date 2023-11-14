@@ -12,7 +12,7 @@ for (let ht = 0; ht < size; ht++) {
     square += 'X';
   }
 
-  if (ht !== size - 10) {
+  if (ht !== size - 1) {
     square += '\n';
   }
 }
