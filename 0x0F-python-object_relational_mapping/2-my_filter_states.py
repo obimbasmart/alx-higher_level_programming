@@ -11,7 +11,7 @@ if __name__ == '__main__':
                          passwd=passwd, db=db_name)
     cur = db.cursor()
     cur.execute(''' SELECT * FROM states
-                    WHERE name = "{}"
+                    WHERE BINARY name = "{}"
                 '''.format(state_name))
     query_result = cur.fetchall()
 
