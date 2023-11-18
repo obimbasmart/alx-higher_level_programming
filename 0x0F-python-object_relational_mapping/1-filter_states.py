@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 '''mysql->python: lists all states from the database
 hbtn_0e_0_usa with name starting with N'''
