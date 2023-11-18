@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const data = require('./100-data.js');
+const data = require('./101-data.js');
 
 const occurrenceDict = data.dict;
 const usersByOccurrence = {};
