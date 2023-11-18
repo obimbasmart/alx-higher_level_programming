@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
-'''mysql->python: filter states by name'''
+'''mysql->python: filter cities by state name'''
 
 import MySQLdb
 import sys
