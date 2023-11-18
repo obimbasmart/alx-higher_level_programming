@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 '''mysql->python: filter states by name'''
 
@@ -13,8 +13,8 @@ if __name__ == '__main__':
     cur.execute(''' SELECT * FROM states
                     WHERE name = %s
                 ''', (state_name,))
-    query_result = cur.fetchall()
 
+    query_result = cur.fetchall()
     for item in query_result:
         print(item)
 
