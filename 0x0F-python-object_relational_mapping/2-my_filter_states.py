@@ -10,7 +10,9 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost', user=user_name,
                          passwd=passwd, db=db_name)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = %s", (state_name,))
+    cur.execute(''' SELECT * FROM states
+                    WHERE name = "{}"
+                '''.format(state_name))
     query_result = cur.fetchall()
 
     for item in query_result:
