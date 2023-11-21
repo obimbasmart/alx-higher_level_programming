@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""script that lists all State objects from the database"""
+"""script that lists the first state object from the database"""
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
