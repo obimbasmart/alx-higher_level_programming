@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''file that contains the class definition of a State '''
+"""file that contains the class definition of a State"""
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -18,6 +18,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """ class definition of a State, an instance of declarative_base"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
