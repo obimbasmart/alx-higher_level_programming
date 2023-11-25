@@ -15,6 +15,7 @@ if __name__ == "__main__":
         'mysql+mysqldb://localhost/{}'.format(db_name),
         connect_args={'user': user_name, 'password': passwd})
 
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
