@@ -4,6 +4,7 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.exc import ProgrammingError
 from relationship_state import Base, State
 from relationship_city import City
 import sys
@@ -17,7 +18,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name="California", cities=[City(name="San Francisco")])
-    session.add(new_state)
-    session.commit()
-    session.close()
+    try:
+        new_state = State(name="California", cities=[
+                          City(name="San Francisco")])
+        session.add(new_state)
+        session.commit()
+    except ProgrammingError as err:
+        Base.metadata.create_all(engine)
+    finally:
+        session.close()
