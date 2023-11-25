@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 """script that lists the first state object from the database"""
 
@@ -15,15 +15,14 @@ if __name__ == "__main__":
         'mysql+mysqldb://localhost/{}'.format(db_name),
         connect_args={'user': user_name, 'password': passwd})
 
+    if Base.metadata.tables.get("states") is not None:  # no table
+        Base.metadata.create_all(engine)
+
     Session = sessionmaker(bind=engine)
     session = Session()
+    new_state = State(name="California", cities=[
+        City(name="San Francisco")])
 
-    try:
-        new_state = State(name="California", cities=[
-                          City(name="San Francisco")])
-        session.add(new_state)
-        session.commit()
-    except ProgrammingError as err:
-        Base.metadata.create_all(engine)
-    finally:
-        session.close()
+    session.add(new_state)
+    session.commit()
+    session.close()
