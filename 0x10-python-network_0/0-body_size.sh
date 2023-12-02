@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # display the size of the body of a HTTP response
 
 url="$1"
