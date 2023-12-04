@@ -11,9 +11,10 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         params["q"] = sys.argv[1]
     res = requests.request('POST', url, data=params)
+
     if not len(res.json()):
         print("No result")
-    elif not isinstance(res.json(), dict):
+    elif res.headers['Content-Type'] != "application/json":
         print("Not a valid JSON")
     else:
         print("[{}] {}".format(res.json()['id'], res.json()['name']))
