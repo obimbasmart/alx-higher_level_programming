@@ -7,7 +7,7 @@ Print all commits by: `<sha>: <author name>` (one by line)"""
 
 import requests
 import sys
-from pprint import pprint as pp
+
 if __name__ == "__main__":
     _, repo, username = sys.argv
     api_url = f'https://api.github.com/repos/{username}/{repo}/commits'
