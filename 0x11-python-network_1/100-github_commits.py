@@ -7,7 +7,7 @@ Print all commits by: `<sha>: <author name>` (one by line)"""
 
 import requests
 import sys
-
+from pprint import pprint as pp
 if __name__ == "__main__":
     _, repo, username = sys.argv
     api_url = f'https://api.github.com/repos/{username}/{repo}/commits'
@@ -18,10 +18,10 @@ if __name__ == "__main__":
     response = requests.get(api_url, headers=headers)
     if response.status_code == 200:
         res = response.json()
-        for i, commit in enumerate(res):
+        sorted_commit = sorted(
+            res, key=lambda x: x['commit']['author']['date'], reverse=True)
+        for i, commit in enumerate(sorted_commit):
             print(commit['commit']['tree']['sha'] + ':',
                   commit['commit']['author']['name'])
             if i == 10:
                 break
-    else:
-        print(None)
