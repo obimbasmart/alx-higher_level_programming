@@ -19,7 +19,7 @@ if __name__ == "__main__":
     if response.status_code == 200:
         res = response.json()
         for i, commit in enumerate(res):
-            print(commit['commit']['tree']['sha'] + ': ',
+            print(commit['commit']['tree']['sha'] + ':',
                   commit['commit']['author']['name'])
             if i == 10:
                 break
