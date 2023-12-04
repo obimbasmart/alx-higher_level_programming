@@ -17,3 +17,5 @@ if __name__ == "__main__":
     response = requests.get(api_url, headers=headers)
     if response.status_code == 200:
         print(response.json().get('id'))
+    else:
+        print(None)
