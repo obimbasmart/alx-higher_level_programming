@@ -9,7 +9,7 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    _, username, repo = sys.argv
+    _, repo, username = sys.argv
     api_url = f'https://api.github.com/repos/{username}/{repo}/commits'
     headers = {
         'Accept': 'application/vnd.github+json',
