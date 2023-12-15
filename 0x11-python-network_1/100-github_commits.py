@@ -21,7 +21,7 @@ if __name__ == "__main__":
         sorted_commit = sorted(
             res, key=lambda x: x['commit']['author']['date'], reverse=True)
         for i, commit in enumerate(sorted_commit):
-            print(commit['commit']['tree']['sha'] + ':',
+            print(commit['sha'] + ':',
                   commit['commit']['author']['name'])
             if i == 10:
                 break
