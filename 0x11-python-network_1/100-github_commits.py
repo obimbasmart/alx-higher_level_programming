@@ -20,8 +20,6 @@ if __name__ == "__main__":
         res = response.json()
         sorted_commit = sorted(
             res, key=lambda x: x['commit']['author']['date'], reverse=True)
-        for i, commit in enumerate(sorted_commit):
+        for i, commit in enumerate(sorted_commit[:10]):
             print(commit['sha'] + ':',
                   commit['commit']['author']['name'])
-            if i == 10:
-                break
