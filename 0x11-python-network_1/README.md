@@ -113,6 +113,10 @@ Write a Python script that takes in a letter and sends a POST request to http://
 - You are not allowed to import packages other than requests and sys
 - You don’t need to check arguments passed to the script (number or type)
 
+
+</details>
+
+
 ## Advanced task
 
 <details><summary><code>100-github_commits.py</code>The Holberton School staff evaluates candidates applying for a back-end position with multiple technical challenges, like this one: </summary>
