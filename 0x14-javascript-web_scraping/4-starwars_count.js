@@ -4,7 +4,7 @@
 
 const request = require('request');
 const id = '/18/';
-const url = 'https://swapi-api.alx-tools.com/api/films/';
+const url = process.argv[2]
 
 request(url, function (err, response, body) {   // eslint-disable-line
   const allFilms = JSON.parse(body);
