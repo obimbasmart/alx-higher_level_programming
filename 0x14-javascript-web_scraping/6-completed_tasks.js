@@ -23,5 +23,10 @@ request(url, function (err, response, body) {
     }
   });
 
+  Object.keys(allUsers).forEach(key => {
+    if (!allUsers[key]) { // users with no completed tasks
+      delete allUsers[key];
+    }
+  });
   console.log(allUsers);
 });
